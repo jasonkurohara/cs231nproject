@@ -9,10 +9,10 @@ function opt = globals()
 opt.root = pwd;
 
 % path for MOT benchmark
-mot_paths = {'/home/yuxiang/Projects/Multitarget_Tracking/MOTbenchmark', ...
-    '/scail/scratch/u/yuxiang/MOTbenchmark'};
+mot_paths = {'MOT_data'};
 for i = 1:numel(mot_paths)
     if exist(mot_paths{i}, 'dir')
+        disp('yes');
         opt.mot = mot_paths{i};
         break;
     end
@@ -21,15 +21,11 @@ end
 opt.mot2d = '2DMOT2015';
 opt.results = 'results';
 
-opt.mot2d_train_seqs = {'TUD-Stadtmitte', 'TUD-Campus', 'PETS09-S2L1', ...
-    'ETH-Bahnhof', 'ETH-Sunnyday', 'ETH-Pedcross2', 'ADL-Rundle-6', ...
-    'ADL-Rundle-8', 'KITTI-13', 'KITTI-17', 'Venice-2'};
-opt.mot2d_train_nums = [179, 71, 795, 1000, 354, 837, 525, 654, 340, 145, 600];
+opt.mot2d_train_seqs = {'M0101', 'M0201', 'M0202', 'M0204', 'M0205', 'M0206', 'M0208', 'M0209', 'M0210', 'M0301', 'M0401', 'M0402', 'M0403',  'M0501', 'M0601', 'M0602', 'M0603', 'M0604', 'M0605', 'M0606', 'M0701'};
+opt.mot2d_train_nums = [407, 1076, 291, 350, 646, 562, 265, 1576, 583, 325, 613, 410, 514, 352, 372, 480, 2035, 1079, 787, 1374, 1308];
 
-opt.mot2d_test_seqs = {'TUD-Crossing', 'PETS09-S2L2', 'ETH-Jelmoli', ...
-    'ETH-Linthescher', 'ETH-Crossing', 'AVG-TownCentre', 'ADL-Rundle-1', ...
-    'ADL-Rundle-3', 'KITTI-16', 'KITTI-19', 'Venice-1'};
-opt.mot2d_test_nums = [201, 436, 440, 1194, 219, 450, 500, 625, 209, 1059, 450];
+opt.mot2d_test_seqs = {'M1303', 'M1304', 'M1305', 'M1306', 'M1401'};
+opt.mot2d_test_nums = [445, 1550, 600, 1200, 1050];
 
 addpath(fullfile(opt.mot, 'devkit', 'utils'));
 addpath([opt.root '/3rd_party/libsvm-3.20/matlab']);

@@ -16,7 +16,7 @@ dres_image.I = cell(seq_num, 1);
 dres_image.Igray = cell(seq_num, 1);
 
 for i = 1:seq_num
-    filename = fullfile(opt.mot, opt.mot2d, seq_set, seq_name, 'img1', sprintf('%06d.jpg', i));
+    filename = fullfile(opt.mot, opt.mot2d, seq_set, seq_name, 'img1', sprintf('img%06d.jpg', i));
     disp(filename);
     I = imread(filename);
 

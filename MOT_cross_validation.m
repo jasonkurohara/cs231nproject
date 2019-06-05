@@ -17,8 +17,10 @@ mot2d_train_seqs = {'TUD-Stadtmitte', 'TUD-Campus', 'PETS09-S2L1', ...
    'ADL-Rundle-8', 'KITTI-13', 'KITTI-17', 'Venice-2'};
 
 % training and testing pairs
-seq_idx_train = {{1}, {4},    {7},     {9}};
-seq_idx_test  = {{2}, {5, 6}, {8, 11}, {10}};
+% seq_idx_train = {{1}, {4},    {7},     {9}};
+seq_idx_train = {{1}};
+seq_idx_test = {{2}};
+% seq_idx_test  = {{2}, {5, 6}, {8, 11}, {10}};
 
 seq_set_test = 'train';
 N = numel(seq_idx_train);
