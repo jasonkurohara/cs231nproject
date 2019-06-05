@@ -1,4 +1,14 @@
 # cs231nproject
+TO CS231N STAFF
+============
+This YOLO contains
+- create_image_annotations.py creates the annotations (bounding box coordiantes and size and class label) for each image from the ground truth data.
+- create_splits_text.py splits the data 80-10-10
+
+
+
+REPORT
+============
 Rising traffic congestion is an inescapable problem in large urban areas
 of the world. In order to plan routes and reduce unnecessary travel
 time, governments require accurate and reliable information on vehicles
